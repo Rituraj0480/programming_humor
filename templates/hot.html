@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+    <ul class="nav justify-content-center mb-2 p-2">
+        <li class="nav-item">
+        <a class="nav-link active rounded bg-danger" href="#">Hot</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="/new">New</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="/top">Top</a>
+        </li>
+    </ul>
+
+    <div class="content border border-primary m-2 p-2">
+        {% for i in res %}
+        <div class="card mt-5 mb-5 ml-auto mr-auto bg-primary" style="width: 50%;">
+            <img class="card-img-top" src="{{i[1]}}" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">{{i[0]}}</h5>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+</div>
+
+{%  endblock %}

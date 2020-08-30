@@ -1,0 +1,13 @@
+body {
+    background-color: #1d1e22;
+    color:  #feda6a;
+    font-family: 'Oswald', 'Lato', sans-serif;
+}
+
+.title {
+    margin: auto;
+}
+
+.content {
+    text-align: center;
+}
