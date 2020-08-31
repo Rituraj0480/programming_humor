@@ -6,9 +6,11 @@ top_blueprint = Blueprint('top_blueprint', __name__)
 
 @top_blueprint.route('/top')
 def get_post():
-    reddit = praw.Reddit(client_id="WpL-adBFuXHpsg",
-                     client_secret="JhSLFa8NN4IjZLD0AiVq4X6BUL4",
-                        user_agent = "programming_humor 1.0 by /u/rituraj0480")
+    f = open("key.txt", "r")
+    key = f.read().split(',')
+    reddit = praw.Reddit(client_id=key[0],
+                     client_secret=key[1],
+                        user_agent = key[2])
 
     sub_reddit = reddit.subreddit("ProgrammerHumor")
     res = []
