@@ -14,7 +14,7 @@ def get_post():
 
     sub_reddit = reddit.subreddit("ProgrammerHumor")
     res = []
-    for submission in sub_reddit.hot(limit=20):
+    for submission in sub_reddit.hot(limit=25):
         title = submission.title
         url = submission.url
         res.append([title, url])

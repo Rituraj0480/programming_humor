@@ -15,13 +15,13 @@
         </li>
     </ul>
 
-    <div class="content border border-primary m-2 p-2">
+    <div class="content border border-primary m-2">
         {% for i in res %}
-        <div class="card mt-5 mb-5 ml-auto mr-auto bg-primary" style="width: 50%;">
-            <img class="card-img-top" src="{{i[1]}}" alt="Card image cap">
+        <div class="card mt-4 mb-4 ml-auto mr-auto bg-primary" style="width: 90%;">
             <div class="card-body">
                 <h5 class="card-title">{{i[0]}}</h5>
             </div>
+            <img class="card-img-top" src="{{i[1]}}" alt="">
         </div>
         {% endfor %}
     </div>
